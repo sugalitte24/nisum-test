@@ -1,0 +1,22 @@
+spring:
+  # Spring Data JPA configuration
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  # Database
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:nisum
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+security:
+  jwt:
+    secret: HYgAf)rr_6-ts9
