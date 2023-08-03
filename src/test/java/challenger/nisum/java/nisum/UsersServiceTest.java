@@ -54,7 +54,7 @@ public class UsersServiceTest {
         var phonesRequest = List.of(new PhonesDto(123L, 2222L, 4444L));
         var phonesRequestEntity = List.of(new Phones(123L, 2222L, 4444L));
         var request = new UsersRequest("name", "test@test.com", "password.123", phonesRequest, true);
-        var requestDto = new UsersDto("name", "test@test.com", "password.123", true, LocalDateTime.now(), "dd4s74s74s5", phonesRequest);
+        var requestDto = new UsersDto("name", "test@test.com",  true, LocalDateTime.now(), "dd4s74s74s5", phonesRequest);
         var responseEntity = new Users("name", "test@test.com", "password.123", true, LocalDateTime.now(), phonesRequestEntity);
         var tokenDto = new TokenDto("token1123", new Date(), new Date(), "bearer");
         Mockito.when(usersRepository.existsByEmail(request.getEmail())).thenReturn(false);

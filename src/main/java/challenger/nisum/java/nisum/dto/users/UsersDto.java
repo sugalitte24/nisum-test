@@ -16,7 +16,6 @@ import lombok.Setter;
 public class UsersDto extends BaseModelDto {
     private String name;
     private String email;
-    private String password;
     private Boolean isActive = true;
     private LocalDateTime lastLogin;
     private String token;
